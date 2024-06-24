@@ -1,0 +1,200 @@
+
+/* Variables */
+:root {
+  /* COLOR */
+  --bg-primary-color: #292A2D;
+  --bg-secondary-color: #333333;
+  --bg-tertiary-color: #58595B;
+
+  --font-primary-color: #fff;
+  --font-secondary-color: #54c5cd;
+  --font-tertiary-color: #58595B;
+
+  --alert-red-color: #FF261B;
+  --alert-yellow-color: #FBFB38;
+  --alert-green-color: #10CD00;
+  --alert-gray-color: #B4B4B4;
+
+
+  /* FONT */
+  --size-fonte: 16px;
+  
+}
+
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: var(--font-primary-color);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+  
+
+
+.btn-newProcess{
+  background-color: var(--bg-tertiary-color);
+  border-radius: 16px;
+  font-size: 1rem;
+  
+  padding: 1rem 3rem;
+}
+
+
+.btn-newProcess {
+
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(var(--bg-secondary-color), var(--bg-tertiary-color));
+  border-radius: 16px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  
+  color: var(--font-primary-color);
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  width: 15rem;
+  height: 3rem;
+  justify-content: center;
+  line-height: 2;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 5rem;
+  outline: none;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-newProcess:hover {
+color: var(--font-secondary-color);
+opacity: .9;
+}
+
+.btn-newProcess:active {
+outline: 0;
+box-shadow: var(--font-secondary-color)  0 0 0 1px;
+}
+
+
+.cardList{
+  margin: 1rem;
+}
+
+.modal {
+  display: none; /* Inicialmente, o modal está oculto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo escurecido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Para garantir que o modal esteja na frente de outros elementos */
+}
+
+.modal form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: black;
+  background-color: white;
+  padding: 15px;
+}
+
+.modal p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: black;
+  background-color: white;
+}
+
+.modal div {
+  margin-bottom: 10px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.modaldiv{
+  color: black;
+  background-color: white;
+}
+
+/* Estilos para o botão de fechar o modal (se você quiser adicionar um botão de fechar) */
+.modal .close-button {  
+  display: flex;
+  cursor: pointer;
+  font-size: 30px;
+  color: black;
+  background-color: transparent;
+  border: none;
+  height: 30px;
+  width: 30px;
+  margin-left: 270px;
+  margin-top: -10px;
+}
+
+
+
+/* Estilize o botão de fechar quando o mouse passar por cima dele */
+.modal .close-button:hover {
+  color: #13025e; /* Cor alterada quando o mouse passa por cima */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 420px) {
+.btn-newProcess {
+  height: 48px;
+}
+}

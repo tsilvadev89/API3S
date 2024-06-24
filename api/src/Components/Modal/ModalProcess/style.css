@@ -1,0 +1,487 @@
+:root {
+  --primary-color: white;
+  --secondary-color: rgb(61, 68, 73);
+  --highlight-color: #3282b8;
+
+  --dt-status-Pendente-color: #bac8c9;
+  --dt-status-Concluida-color: #54c5cd;
+  --dt-status-Andamento-color: #fbfb38;
+  --dt-status-Atrasada-color: #ff6961;
+
+  --dt-padding: 12px;
+  --dt-padding-s: 6px;
+  --dt-padding-xs: 2px;
+
+  --dt-border-radius: 3px;
+
+  --dt-background-color-container: #2a3338;
+  --dt-border-color: var(--secondary-color);
+  --dt-bg-color: var(--highlight-color);
+  --dt-text-color: var(--primary-color);
+  --dt-bg-active-button: var(--highlight-color);
+  --dt-text-color-button: var(--primary-color);
+  --dt-text-color-active-button: var(--primary-color);
+  --dt-hover-cell-color: var(--highlight-color);
+  --dt-even-row-color: var(--secondary-color);
+  --dt-focus-color: var(--highlight-color);
+  --dt-input-background-color: var(--secondary-color);
+  --dt-input-color: var(--primary-color);
+}
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #58595B;
+  color: white;
+  }
+  
+.ProcessModal{
+    display: flex;
+    width: 100%;  
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+
+.subProcessModal{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+
+.subProcessModal h2{
+  color:#54c5cd;
+}
+
+.Datahora{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: .8rem;
+}
+
+.Datahora > span {
+  padding: 0.5rem 2rem 0 0;
+}
+
+.Datahora > span > img {
+  height: 0.8rem;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+
+button, input, td>select {
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  border-color: #54c5cd;
+  color: aliceblue;
+}
+
+.n-entries{
+  color: aliceblue;
+}
+
+
+
+.datatable-container header {
+    font-size: 1rem;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    color:#54c5cd
+
+}
+
+
+#btnAdc{
+    font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #333;
+    color:#54c5cd;
+}
+
+
+
+main{
+    background-color: #333;
+    color: #fff;
+    max-width: 950px;
+    height: 350px;
+    text-align: center;
+}
+
+table {
+    width: 95%;
+    font-size: 12px;
+    margin: 0;
+}
+
+th{
+    padding: 5px;
+    text-align: left;
+}
+
+td{
+    padding: 5px;
+    text-align: left;
+    align-self: start;
+}
+
+.listHead{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.listBody{
+    border-bottom: 2px solid #fff;
+    padding: 10px;
+    margin-bottom:  px;
+}
+
+
+.Andamento, .Concluida, .Atrasada{
+  border-radius: 5px;
+}
+
+
+.arquivo{
+    display:flex;
+    justify-content: center;
+    
+}
+
+#btnArq{
+    display:flex;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 15px;
+}
+  
+
+  .datatable-container .header-tools .tools ul li button a img {
+    background-size: cover;
+    width: 2rem;
+    margin-right: 1rem;
+  }
+  
+  .header-tools .tools ul li button a{
+    font-size: 1rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .datatable-container {
+    font-family: sans-serif;
+    background-color: var(--dt-background-color-container);
+    border-radius: var(--dt-border-radius);
+    color: var(--dt-text-color);
+    max-width: 1140px;
+    min-width: 950px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  
+  .datatable-container .header-tools {
+    border-bottom: solid 1px var(--dt-border-color);
+    padding: var(--dt-padding);
+    padding-left: 0;
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .datatable-container .header-tools .search {
+    width: 30%;
+  }
+  
+  .datatable-container .header-tools .search .search-input {
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    background-color: var(--dt-input-background-color);
+    display: block;
+    box-sizing: border-box;
+    border-radius: var(--dt-border-radius);
+    border: solid 1px var(--dt-border-color);
+    color: var(--dt-input-color);
+  }
+  
+  .datatable-container .header-tools .tools {
+    width: 70%;
+  }
+  
+  .datatable-container .header-tools .tools ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+  }
+  
+  .datatable-container .header-tools .tools ul li {
+    display: inline-block;
+    margin: 0 var(--dt-padding-xs);
+    align-items: baseline;
+  }
+  
+
+
+/* ESTILIZAÇÃO DOS ICONES DAS TASKS */
+
+  .task-tools .tools ul li button i img {
+    background-size: cover;
+    width: 1rem;
+  }
+  
+
+  .datatable-container .task-tools {
+    height: auto;
+    border-bottom: solid 1px var(--dt-border-color);
+    padding: var(--dt-padding);
+    padding-left: 0;
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .datatable-container .task-tools .search {
+    width: 30%;
+  }
+  
+  .datatable-container .task-tools .search .search-input {
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    background-color: var(--dt-input-background-color);
+    display: block;
+    box-sizing: border-box;
+    border-radius: var(--dt-border-radius);
+    border: solid 1px var(--dt-border-color);
+    color: var(--dt-input-color);
+  }
+  
+  .datatable-container .task-tools .tools {
+    width: 70%;
+  }
+  
+  .datatable-container .task-tools .tools ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+  }
+  
+  .datatable-container .task-tools .tools ul li {
+    display: inline-block;
+    margin: 0 var(--dt-padding-xs);
+    align-items: baseline;
+  }
+
+
+
+
+
+
+
+  
+  
+  .datatable-container .footer-tools {
+    padding: var(--dt-padding);
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .datatable-container .footer-tools .list-items {
+    width: 50%;
+  }
+  
+  .datatable-container .footer-tools .pages {
+    margin-left: auto;
+    margin-right: 0;
+    width: 50%;
+  }
+  
+  .datatable-container .footer-tools .pages ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+  }
+  
+  .datatable-container .footer-tools .pages ul li {
+    display: inline-block;
+    margin: 0 var(--dt-padding-xs);
+  }
+  
+  .datatable-container .footer-tools .pages ul li button,
+  .datatable-container .header-tools .tools ul li button,
+  .datatable-container .task-tools .tools ul li button  {
+    color: var(--dt-text-color-button);
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: var(--dt-border-radius);
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .datatable-container .footer-tools .pages ul li button:hover,
+  .datatable-container .header-tools .tools ul li button:hover,
+  .datatable-container .task-tools .tools ul li button:hover {
+    background: var(--dt-bg-active-button);
+    color: var(--dt-text-color-active-button);
+  }
+  
+  .datatable-container .footer-tools .pages ul li span.active {
+    background-color: var(--dt-bg-color);
+    border-radius: var(--dt-border-radius);
+  }
+  
+  .datatable-container .footer-tools .pages ul li button,
+  .datatable-container .footer-tools .pages ul li span,
+  .datatable-container .header-tools .tools ul li button,
+  .datatable-container .task-tools .tools ul li button {
+    padding: var(--dt-padding-s) var(--dt-padding);
+  }
+  
+  .datatable-container .datatable {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .datatable-container .datatable,
+  .datatable-container .datatable th,
+  .datatable-container .datatable td {
+    padding: var(--dt-padding) var(--dt-padding);
+  }
+  
+  .datatable-container .datatable th {
+    font-weight: bolder;
+    text-align: left;
+    border-bottom: solid 1px var(--dt-border-color);
+  }
+  
+  .datatable-container .datatable td {
+    border-bottom: solid 1px var(--dt-border-color);
+  }
+  
+  .datatable-container .datatable tbody tr:nth-child(even) {
+    background-color: var(--dt-even-row-color);
+  }
+  
+  .datatable-container .datatable tbody tr:hover {
+    background-color: var(--dt-hover-cell-color);
+  }
+  
+  .datatable-container .datatable tbody tr .Pendente::after,
+  .datatable-container .datatable tbody tr .Concluida::after,
+  .datatable-container .datatable tbody tr .Andamento::after,
+  .datatable-container .datatable tbody tr .Atrasada::after {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .ProcessModal .Pendente {
+    background-color: var(--dt-status-Pendente-color);
+    color: black;
+    padding: 0.5rem 2rem;
+  }
+
+  .ProcessModal .Concluida {
+    background-color: var(--dt-status-Concluida-color);
+    color: black;
+    padding: 0.5rem 2rem;
+  }
+  
+  .ProcessModal .Andamento{
+    background-color: var(--dt-status-Andamento-color);
+    color: black;
+    padding: 0.5rem 2rem;
+  }
+  
+  .ProcessModal .Atrasada{
+    background-color: var(--dt-status-Atrasada-color);
+    color: black;
+    padding: 0.5rem 2rem;
+  }
+
+
+  .datatable-container .datatable tbody tr .Pendente::after {
+    content: "Pendente";
+    color: var(--dt-status-Pendente-color);
+  }
+  
+  .datatable-container .datatable tbody tr .Concluida::after {
+    content: "Completada";
+    color: var(--dt-status-Concluida-color);
+  }
+  
+  .datatable-container .datatable tbody tr .Andamento::after {
+    content: "Andamento";
+    color: var(--dt-status-Andamento-color);
+  }
+  
+  .datatable-container .datatable tbody tr .Atrasada::after {
+    content: "Atrasada";
+    /* color: var(--dt-status-Atrasada-color); */
+    color: red;
+  }
+
+  .datatable-container .datatable tbody tr .Pendente::before,
+  .datatable-container .datatable tbody tr .Concluida::before,
+  .datatable-container .datatable tbody tr .Andamento::before,
+  .datatable-container .datatable tbody tr .Atrasada::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  .datatable-container .datatable tbody tr .Pendente::before {
+    background-color: var(--dt-status-Pendente-color);
+  }
+  .datatable-container .datatable tbody tr .Concluida::before {
+    background-color: var(--dt-status-Concluida-color);
+  }
+  
+  .datatable-container .datatable tbody tr .Andamento::before {
+    background-color: var(--dt-status-Andamento-color);
+  }
+  
+  .datatable-container .datatable tbody tr .Atrasada::before {
+    background-color: var(--dt-status-Atrasada-color);
+    background-color: red;
+  }
+ .iconeanexo-li{
+  width: 40px; 
+  height: 32.39px;
+ }
+ .selected-file p{
+  font-size: x-small;
+ }
+ .link-anexo{
+  padding: 0;
+  margin: 0;
+ }
